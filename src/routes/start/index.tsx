@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import coding from '../../assets/coding.png';
 import photo from '../../assets/photo.jpg';
 import { Frame } from '../../components/frame';
@@ -17,12 +18,12 @@ export const Component = function Start(props: DashboardProps): JSX.Element {
         <img src={coding} alt="Coding" className="object-cover object-center h-full w-full" />
         <div className="absolute inset-0 bg-[#22211E] opacity-70"></div>
         <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50">
-          <div className={`relative ${hover} cursor-pointer`}>
+          <Link to="/coding" className={`relative ${hover} cursor-pointer`}>
             <Frame />
             <div className="text-white text-8xl font-bold pl-16 relative" style={{ left: '-5%' }}>
               CODING
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="w-1/2 bg-blue-500 flex items-center justify-center overflow-hidden relative">

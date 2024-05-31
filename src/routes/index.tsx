@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
     errorElement: <RootError />,
     children: [
       // { index: true, element: <Navigate to="/start" replace /> },
-      // { path: 'start', lazy: () => import('./start') },
+      { path: 'coding', lazy: () => import('./coding') },
       // { path: 'tasks', lazy: () => import('./tasks') },
       // { path: 'messages', lazy: () => import('./messages') },
     ],
