@@ -36,17 +36,9 @@ export function MainLayout(): JSX.Element {
 export function BaseLayout(): JSX.Element {
   return (
     <Fragment>
-      <div className="grid grid-cols-1 min-h-screen">
-        {/* <div className="row-start-1 row-end-2 col-start-1 col-end-2">
-          <Logo />aaa
-        </div> */}
-
-        <div className="row-start-1 row-end-[-1] col-start-1 col-end-[-1] pt-[60px]">
-          <Suspense>
-            <Outlet />
-          </Suspense>
-        </div>
-      </div>
+      <Suspense>
+        <Outlet />
+      </Suspense>
     </Fragment>
   );
 }
