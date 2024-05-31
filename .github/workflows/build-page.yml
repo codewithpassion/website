@@ -30,4 +30,8 @@ jobs:
           yarn
           yarn build
 
+      - name: deploy
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
       
