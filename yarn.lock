@@ -2534,6 +2534,7 @@ __metadata:
     postcss: "npm:^8.4.38"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    react-photo-album: "npm:^2.4.0"
     react-router-dom: "npm:^6.23.1"
     sharp: "npm:^0.33.4"
     svgo: "npm:^3.3.2"
@@ -2927,6 +2928,15 @@ __metadata:
   peerDependencies:
     react: ^18.3.1
   checksum: 10/3f4b73a3aa083091173b29812b10394dd06f4ac06aff410b74702cfb3aa29d7b0ced208aab92d5272919b612e5cda21aeb1d54191848cf6e46e9e354f3541f81
+  languageName: node
+  linkType: hard
+
+"react-photo-album@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "react-photo-album@npm:2.4.0"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 10/c915438c09bdf8241c2249f157bcaed2c2a9410f41b9e70bb0084afa6c6e6a402e89f2376fc8ec27f0ba355e53281bfaf3dde4b420f4ee4e8e1227f0d9b67e3f
   languageName: node
   linkType: hard
 

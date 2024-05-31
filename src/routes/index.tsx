@@ -28,6 +28,7 @@ export const router = createBrowserRouter([
     children: [
       // { index: true, element: <Navigate to="/start" replace /> },
       { path: 'coding', lazy: () => import('./coding') },
+      { path: 'photo', lazy: () => import('./photo') },
       // { path: 'tasks', lazy: () => import('./tasks') },
       // { path: 'messages', lazy: () => import('./messages') },
     ],
