@@ -8,7 +8,11 @@ export const Component = function Start(props: DashboardProps): JSX.Element {
   const { className, ...other } = props;
 
   return (
-    <div className={`${className} flex h-screen`} {...other}>
+    <div className={`${className} flex h-screen relative`} {...other}>
+      {/* <div className="absolute w-full flex  z-10" style={{ top: '20px' }}>
+        <Logo />
+      </div> */}
+
       <div className="w-1/2 bg-gray-800 flex items-center justify-center overflow-hidden relative">
         <img src={coding} alt="Coding" className="object-cover object-center h-full w-full" />
         <div className="absolute inset-0 bg-[#22211E] opacity-70"></div>
