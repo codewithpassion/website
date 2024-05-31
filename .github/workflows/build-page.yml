@@ -29,6 +29,7 @@ jobs:
         run: |
           yarn
           yarn build
+          cp CNAME dist/
 
       - name: deploy
         uses: actions/upload-pages-artifact@v3
