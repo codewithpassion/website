@@ -7,6 +7,7 @@ import linuxLogo from '../../assets/linux.svg';
 import reactLogo from '../../assets/react.svg';
 import typescriptLogo from '../../assets/typescript.svg';
 import { Skill } from '../../components/skill';
+import { WorkHistoryList } from './work-history-list';
 
 export const Component = function ProfilePage() {
   return (
@@ -68,6 +69,10 @@ export const Component = function ProfilePage() {
             description="Linux is my favorite operating system. I've been developing on it since the early 2000s. And while my desktop might be running Windows, with using WSL, everything is Linux. 
             Over the years I've built countles disk images, and even my own distribution using Yocto/OpenEmbedded." />
         </div>
+      </div>
+
+      <div className="mt-16 w-full max-w-4xl">
+        <WorkHistoryList />
       </div>
     </div>
   );
