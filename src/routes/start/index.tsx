@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import coding from '../../assets/coding.png';
 import photo from '../../assets/photo.jpg';
@@ -5,40 +6,32 @@ import { Frame } from '../../components/frame';
 
 const transform = "transform transition-transform duration-300"
 const hover = `${transform} hover:scale-110`
+const cell = ``
+
+const Cell: React.FC<{ bgColor: string, mirrored: boolean, text: string, link: string, bgImage: string, bgAlt: string }> = ({ bgColor, mirrored, link, text, bgAlt, bgImage }) => {
+  return (<div className={`${bgColor} ${cell} w-1/2 h-screen flex relative`}>
+    <img src={bgImage} alt={bgAlt} className="object-cover object-center h-full w-full" />
+    <div className="absolute inset-0 bg-[#22211E] opacity-70"></div>
+    <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50">
+      <Link to={link} className={`relative ${hover} cursor-pointer flex ${mirrored ? 'flex-row-reverse' : ''} `}>
+        <Frame mirrored={mirrored} className={`${mirrored ? 'mr-[-3rem]' : 'ml-[-2rem]'} `} />
+        <div className={`text-white font-bold w-full relative  text-5xl  md:text-6xl lg:text-8xl pt-2`}>
+          {text}
+        </div>
+      </Link>
+    </div>
+  </div>
+  );
+};
+
 
 export const Component = function Start(props: DashboardProps): JSX.Element {
   const { className, ...other } = props;
 
   return (
-    <div className={`${className} flex h-screen relative`} {...other}>
-      {/* <div className="absolute w-full flex  z-10" style={{ top: '20px' }}>
-        <Logo />
-      </div> */}
-
-      <div className="w-1/2 bg-gray-800 flex items-center justify-center overflow-hidden relative">
-        <img src={coding} alt="Coding" className="object-cover object-center h-full w-full" />
-        <div className="absolute inset-0 bg-[#22211E] opacity-70"></div>
-        <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50">
-          <Link to="/coding" className={`relative ${hover} cursor-pointer`}>
-            <Frame />
-            <div className="text-white text-8xl font-bold pl-16 relative" style={{ left: '-5%' }}>
-              CODING
-            </div>
-          </Link>
-        </div>
-      </div>
-      <div className="w-1/2 bg-blue-500 flex items-center justify-center overflow-hidden relative">
-        <img src={photo} alt="Shark" className="object-cover object-center h-full w-full " />
-        <div className={`absolute inset-0 flex justify-center items-center`}></div>
-        <div className={`absolute inset-0 flex justify-center items-center bg-black bg-opacity-50`}>
-          <Link to="/photo" className={`relative ${hover} cursor-pointer`}>
-            <Frame mirrored />
-            <div className="text-white text-8xl font-bold pl-16 relative" style={{ left: '-10%' }}>
-              PHOTO
-            </div>
-          </Link>
-        </div>
-      </div>
+    <div className={`${className} flex flex-col md:flex-row h-screen relative`} {...other}>
+      <Cell bgColor="bg-gray-800" mirrored={false} text="CODING" link="/coding" bgAlt='Coding' bgImage={coding} />
+      <Cell bgColor="bg-blue-500" mirrored={true} text="PHOTO" link="/photo" bgAlt='Shark' bgImage={photo} />
     </div>
   );
 }
