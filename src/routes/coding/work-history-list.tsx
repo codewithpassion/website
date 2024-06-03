@@ -63,7 +63,7 @@ const WorkHistoryList: React.FC<{}> = () => {
             ]} />
 
           <WorkHistory
-            flag={usFlag}
+            flag={ausFlag}
             startDate={new Date('2019-02-01')}
             endDate={new Date('2021-10-01')}
             url={"https://www.abilitymade.com"}
