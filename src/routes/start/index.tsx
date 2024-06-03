@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { Frame } from '../../components/frame';
 
 // @ts-ignore
-import photo from '../../assets/photo.jpg?w=400&format=webp;png';
+import photo from '../../assets/photo.jpg?w=400&format=webp';
 // @ts-ignore
-import coding from '../../assets/coding.png?w=400&format=webp;png';
+import coding from '../../assets/coding.png?w=400&format=webp';
 
 const transform = "transform transition-transform duration-300"
 const hover = `${transform} hover:scale-110`

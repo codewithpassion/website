@@ -1,5 +1,5 @@
 // @ts-ignore
-import ghbackground from '../../assets/GHBackground.png?w=400&format=webp;png';
+import ghbackground from '../../assets/GHBackground.png?w=400&format=webp';
 import cppLogo from '../../assets/cpp.svg';
 import dockerLogo from '../../assets/docker.svg';
 import githubLogo from '../../assets/github.svg';

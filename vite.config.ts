@@ -29,6 +29,6 @@ export default defineConfig({
         return new URLSearchParams()
       }
     }),
-    ViteImageOptimizer({}),
+    // ViteImageOptimizer({}),
   ],
 })
