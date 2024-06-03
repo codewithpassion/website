@@ -11,6 +11,17 @@ import manatee2 from '../../assets/photos/underwater/_DSC7160.jpg';
 import _DSC7207 from '../../assets/photos/underwater/_DSC7207.jpg';
 import _DSC9156 from '../../assets/photos/underwater/_DSC9156.jpg';
 
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+// import optional lightbox plugins
+import { useState } from "react";
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+
 const photos = [
   { src: manatee1, width: 800, height: 600 },
   { src: manatee2, width: 600, height: 800 },
@@ -23,6 +34,7 @@ const photos = [
 ];
 
 export const Component = function PhotoPage() {
+  const [index, setIndex] = useState(-1);
   return (
     <div className="min-h-screen text-white flex flex-col items-center p-8">
       {/* Header Section */}
@@ -53,7 +65,17 @@ export const Component = function PhotoPage() {
 
       {/* Skills Section */}
       <div className="mt-16 w-full max-w-4xl">
-        <PhotoAlbum layout="rows" photos={photos} targetRowHeight={370} spacing={30} padding={0} />
+        <PhotoAlbum layout="rows" photos={photos} targetRowHeight={370} spacing={30} padding={0}
+          onClick={({ index }) => setIndex(index)} />
+
+        <Lightbox
+          slides={photos}
+          open={index >= 0}
+          index={index}
+          close={() => setIndex(-1)}
+          // enable optional lightbox plugins
+          plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+        />
       </div>
     </div>
   );

@@ -2542,6 +2542,7 @@ __metadata:
     typescript: "npm:^5.2.2"
     vite: "npm:^5.2.0"
     vite-plugin-image-optimizer: "npm:^1.1.8"
+    yet-another-react-lightbox: "npm:^3.19.0"
   languageName: unknown
   linkType: soft
 
@@ -3714,6 +3715,16 @@ __metadata:
   bin:
     yaml: bin.mjs
   checksum: 10/6eafbcd68dead734035f6f72af21bd820c29214caf7d8e40c595671a3c908535cef8092b9660a1c055c5833aa148aa640e0c5fa4adb5af2dacd6d28296ccd81c
+  languageName: node
+  linkType: hard
+
+"yet-another-react-lightbox@npm:^3.19.0":
+  version: 3.19.0
+  resolution: "yet-another-react-lightbox@npm:3.19.0"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 10/a62a666fe0be41fb8b58d1e378242a03722425a526c221f6f1cb22ef7f35d4c87a833d60b1d98adbad144d22170a715148554434f9f72092739c3f8ebcac68d8
   languageName: node
   linkType: hard
 
