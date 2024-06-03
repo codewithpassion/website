@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import coding from '../../assets/coding.png';
-import photo from '../../assets/photo.jpg';
+
 import { Frame } from '../../components/frame';
+
+// @ts-ignore
+import photo from '../../assets/photo.jpg?w=400&format=webp;png';
+// @ts-ignore
+import coding from '../../assets/coding.png?w=400&format=webp;png';
 
 const transform = "transform transition-transform duration-300"
 const hover = `${transform} hover:scale-110`
@@ -31,7 +35,7 @@ export const Component = function Start(props: DashboardProps): JSX.Element {
   return (
     <div className={`${className} flex flex-col md:flex-row h-screen relative`} {...other}>
       <Cell bgColor="bg-gray-800" mirrored={false} text="CODING" link="/coding" bgAlt='Coding' bgImage={coding} />
-      <Cell bgColor="bg-blue-500" mirrored={true} text="PHOTO" link="/photo" bgAlt='Shark' bgImage={photo} />
+      <Cell bgColor="bg-blue-500" mirrored={true} text="PHOTO" link="/photo" bgAlt='Shark' bgImage={`${photo}`} />
     </div>
   );
 }
