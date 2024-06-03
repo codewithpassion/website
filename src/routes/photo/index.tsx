@@ -1,15 +1,7 @@
 import PhotoAlbum from "react-photo-album";
 import photoheader from '../../assets/photoheader.jpg';
-import TubatahaMay20193110 from '../../assets/photos/underwater/Tubataha-May-2019-3110.jpg';
 
 import { Link } from "react-router-dom";
-import CliftonGardens2020070835 from '../../assets/photos/underwater/CliftonGardens-20200708-35.jpg';
-import _DSC1201 from '../../assets/photos/underwater/_DSC1201.jpg';
-import _DSC3851 from '../../assets/photos/underwater/_DSC3851.jpg';
-import manatee1 from '../../assets/photos/underwater/_DSC6653.jpg';
-import manatee2 from '../../assets/photos/underwater/_DSC7160.jpg';
-import _DSC7207 from '../../assets/photos/underwater/_DSC7207.jpg';
-import _DSC9156 from '../../assets/photos/underwater/_DSC9156.jpg';
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -22,16 +14,7 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
-const photos = [
-  { src: manatee1, width: 800, height: 600 },
-  { src: manatee2, width: 600, height: 800 },
-  { src: _DSC7207, width: 600, height: 800 },
-  { src: TubatahaMay20193110, width: 800, height: 600 },
-  { src: _DSC3851, width: 800, height: 600 },
-  { src: _DSC9156, width: 600, height: 800 },
-  { src: _DSC1201, width: 600, height: 800 },
-  { src: CliftonGardens2020070835, width: 600, height: 800 },
-];
+import {photos} from "./photos";
 
 export const Component = function PhotoPage() {
   const [index, setIndex] = useState(-1);
