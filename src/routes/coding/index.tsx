@@ -1,5 +1,5 @@
-// @ts-ignore
 import { Link } from 'react-router-dom';
+// @ts-ignore
 import ghbackground from '../../assets/GHBackground.png?w=400&format=webp';
 import cppLogo from '../../assets/cpp.svg';
 import dockerLogo from '../../assets/docker.svg';
