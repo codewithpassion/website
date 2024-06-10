@@ -1,4 +1,5 @@
 // @ts-ignore
+import { Link } from 'react-router-dom';
 import ghbackground from '../../assets/GHBackground.png?w=400&format=webp';
 import cppLogo from '../../assets/cpp.svg';
 import dockerLogo from '../../assets/docker.svg';
@@ -35,6 +36,21 @@ export const Component = function ProfilePage() {
             <img src={ghbackground} alt="Illustration" className="w-80 h-80 object-cover" />
           </div>
         </div>
+      </div>
+
+      {/* Projects */}
+      <div className="mt-16 w-full max-w-4xl">
+        <h2 className="text-3xl font-bold text-white-900">Projects</h2>
+        <p className="mt-4 text-lg text-white-700">
+          <Skill title="Bone age prediction">
+            Check out this <Link to="https://github.com/codewithpassion/bone-age" target='_blank'>little ML application</Link> to estimate the age of someone, based on an x-ray of the hand. It's currently based on a human dateset that is available, but the ultimate goal is to run it with Dolphin pec fins for a project with my wife.</Skill>
+        </p>
+        <p className="mt-4 text-lg text-white-700">
+          <Skill title="Website">
+            My personal website - the one you're onm right now.
+            It's based on a react frontend with tailwind-css.
+            Hosted on github pages with automated push via workflows. <Link to="https://github.com/codewithpassion/website" target='_blank'>Check out the repository</Link>.</Skill>
+        </p>
       </div>
 
       {/* Skills Section */}

@@ -8,10 +8,12 @@ export function Skill(props: SkillProps): JSX.Element {
   return (
 
     <div className={`flex flex-col items-start bg-sky-950 p-6 rounded-lg shadow-md ${className}`}>
-      <img src={other.logoSrc} alt="TypeScript/JavaScript" className="w-10 h-10" />
-      <h3 className="mt-4 text-xl font-bold">{other.title}</h3>
+      {other.logoSrc && (<img src={other.logoSrc} alt="TypeScript/JavaScript" className="w-10 h-10" />)}
+
+      <h3 className={`${other.logoSrc ? 'mt-4' : ''} text-xl font-bold`}>{other.title}</h3>
       <p className="mt-2 text-white-700">
         {other.description}
+        {other.children}
       </p>
     </div>
 
@@ -19,8 +21,9 @@ export function Skill(props: SkillProps): JSX.Element {
 }
 
 export type SkillProps = {
-  logoSrc: string;
+  logoSrc?: string;
   title: string;
-  description: string;
+  description?: string;
+  children?: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 
