@@ -42,6 +42,10 @@ export const Component = function ProfilePage() {
       <div className="mt-16 w-full max-w-4xl">
         <h2 className="text-3xl font-bold text-white-900">Projects</h2>
         <p className="mt-4 text-lg text-white-700">
+          <Skill title="Anthropic API tool use">
+            <Link to="https://github.com/codewithpassion/typescript-anthropic-tool-use-example" target='_blank'>AI Agent demo in Typescript</Link>. I wanted to learn the Anthropic tool use API - so I built this demo app.</Skill>
+        </p>
+        <p className="mt-4 text-lg text-white-700">
           <Skill title="Bone age prediction">
             Check out this <Link to="https://github.com/codewithpassion/bone-age" target='_blank'>little ML application</Link> to estimate the age of someone, based on an x-ray of the hand. It's currently based on a human dateset that is available, but the ultimate goal is to run it with Dolphin pec fins for a project with my wife.</Skill>
         </p>
