@@ -36,6 +36,7 @@ jobs:
           yarn
           yarn build
           cp CNAME dist/
+          cp public/404.html dist/
 
       - name: deploy
         uses: actions/upload-pages-artifact@v3
