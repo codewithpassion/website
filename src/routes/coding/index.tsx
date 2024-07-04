@@ -43,7 +43,10 @@ export const Component = function ProfilePage() {
         <h2 className="text-3xl font-bold text-white-900">Projects</h2>
         <p className="mt-4 text-lg text-white-700">
           <Skill title="Anthropic API tool use">
-            <Link to="https://github.com/codewithpassion/typescript-anthropic-tool-use-example" target='_blank'>AI Agent demo in Typescript</Link>. I wanted to learn the Anthropic tool use API - so I built this demo app.</Skill>
+            <Link to="https://github.com/codewithpassion/typescript-anthropic-tool-use-example" target='_blank'>AI Agent demo in Typescript</Link>. I wanted to learn the Anthropic tool use API - so I built this demo app.<br /><br />
+            <Link to="https://github.com/codewithpassion/python-langchain-anthropic-tool-use-example" target='_blank'>AI Agent demo in Python using Langchain</Link>. Same functionality, but uses python and Langchain.
+
+          </Skill>
         </p>
         <p className="mt-4 text-lg text-white-700">
           <Skill title="Bone age prediction">
