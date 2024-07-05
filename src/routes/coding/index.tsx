@@ -60,6 +60,40 @@ export const Component = function ProfilePage() {
         </p>
       </div>
 
+      {/* Articles Section */}
+      <div className="mt-16 w-full max-w-4xl">
+        <h2 className="text-3xl font-bold text-white-900">Articles</h2>
+        <p className="mt-4 text-lg text-white-700">
+          I started writing articles about various topics. Here are the links:
+        </p>
+
+        <p className="mt-4 text-lg text-white-700">
+          <Skill title="Anthropic Tool use in TypeScript">
+            <Link to="https://www.linkedin.com/pulse/anthropic-tool-api-typescript-dominik-fretz-mgbxe/" target='_blank'>Check it out here</Link></Skill>
+        </p>
+
+      </div>
+
+
+      {/* Video Section */}
+      <div className="mt-16 w-full max-w-4xl">
+        <h2 className="text-3xl font-bold text-white-900">Videos</h2>
+        <p className="mt-4 text-lg text-white-700">
+          Follow along with my video tutorials on various topics. Here are the links:
+        </p>
+
+        <p className="mt-4 text-lg text-white-700">
+          <Skill title="Anthropic Tool use in TypeScript">
+            <Link to="https://youtu.be/dVuJPvopY18" target='_blank'>Check it out here</Link></Skill>
+        </p>
+        <p className="mt-4 text-lg text-white-700">
+          <Skill title="Intro to LibreChat">
+            <Link to="https://youtu.be/aEc2GDXIFHc" target='_blank'>Check it out here</Link></Skill>
+        </p>
+
+
+      </div>
+
       {/* Skills Section */}
       <div className="mt-16 w-full max-w-4xl">
         <h2 className="text-3xl font-bold text-white-900">Skills</h2>
