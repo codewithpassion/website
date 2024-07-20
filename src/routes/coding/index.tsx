@@ -4,8 +4,8 @@ import ghbackground from '../../assets/GHBackground.png?w=400&format=webp';
 import cppLogo from '../../assets/cpp.svg';
 import dockerLogo from '../../assets/docker.svg';
 import githubLogo from '../../assets/github.svg';
-// @ts-expect-error - no types for this image
 import ragtimeSlides from '../../assets/la-ai-20240720-Talk-to-your-data.pdf';
+// @ts-expect-error - no types for this image
 import ragtime from '../../assets/la-ai-rag.png?w=400&format=webp';
 import linuxLogo from '../../assets/linux.svg';
 import reactLogo from '../../assets/react.svg';
