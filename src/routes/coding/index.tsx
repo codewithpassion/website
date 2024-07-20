@@ -51,10 +51,10 @@ export const Component = function ProfilePage() {
             The backend is written in Python and the frontend in React.
             <br />
             <br />
-            Get my slides from my talk at <b>Lower Alabama - AI</b> <Link to={ragtimeSlides} target='_blank'><br />
+            Get my slides from my talk at <b>Lower Alabama - AI</b> <a href={ragtimeSlides} target='_blank'><br />
               <img src={ragtime} alt="Lower Alabama AI - Talk to your data" className="h-80" />
 
-            </Link>
+            </a>
 
           </Skill>
         </p>
