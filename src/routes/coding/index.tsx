@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
-// @ts-ignore
+// @ts-expect-error - no types for this image
 import ghbackground from '../../assets/GHBackground.png?w=400&format=webp';
 import cppLogo from '../../assets/cpp.svg';
 import dockerLogo from '../../assets/docker.svg';
 import githubLogo from '../../assets/github.svg';
+// @ts-expect-error - no types for this image
+import ragtimeSlides from '../../assets/la-ai-20240720-Talk-to-your-data.pdf';
+import ragtime from '../../assets/la-ai-rag.png?w=400&format=webp';
 import linuxLogo from '../../assets/linux.svg';
 import reactLogo from '../../assets/react.svg';
 import typescriptLogo from '../../assets/typescript.svg';
@@ -41,6 +44,21 @@ export const Component = function ProfilePage() {
       {/* Projects */}
       <div className="mt-16 w-full max-w-4xl">
         <h2 className="text-3xl font-bold text-white-900">Projects</h2>
+        <p className="mt-4 text-lg text-white-700">
+          <Skill title="RAG-time - a basic RAG agent implementation ">
+            Want to talk to your data to gain insights? Check out this basic example of a <Link to="https://github.com/codewithpassion/ragtime" target='_blank'>RAG implementation</Link>.
+            <br />
+            The backend is written in Python and the frontend in React.
+            <br />
+            <br />
+            Get my slides from my talk at <b>Lower Alabama - AI</b> <Link to={ragtimeSlides} target='_blank'><br />
+              <img src={ragtime} alt="Lower Alabama AI - Talk to your data" className="h-80" />
+
+            </Link>
+
+          </Skill>
+        </p>
+
         <p className="mt-4 text-lg text-white-700">
           <Skill title="Anthropic API tool use">
             <Link to="https://github.com/codewithpassion/typescript-anthropic-tool-use-example" target='_blank'>AI Agent demo in Typescript</Link>. I wanted to learn the Anthropic tool use API - so I built this demo app.<br /><br />
